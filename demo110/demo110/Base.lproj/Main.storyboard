@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1ZW-mT-2N0"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hcs-OM-BF7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入账号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rri-dd-auG">
+                                <rect key="frame" x="35" y="284" width="344" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Oan-Sr-Jps"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFx-z1-AhV">
+                                <rect key="frame" x="40" y="356" width="157" height="44"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="V2c-lG-7Wo"/>
+                                </constraints>
+                                <state key="normal" title="登陆">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="joinMetting:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y5j-ik-UU1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmM-jM-4ae">
+                                <rect key="frame" x="40" y="459" width="334" height="45"/>
+                                <color key="backgroundColor" red="0.94117647059999998" green="0.24313725489999999" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Wvo-Ke-hEh"/>
+                                </constraints>
+                                <state key="normal" title="发起通话">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="call:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cvU-NI-CfS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLt-Bj-rcs">
+                                <rect key="frame" x="217" y="356" width="157" height="44"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="03j-I8-yPD"/>
+                                </constraints>
+                                <state key="normal" title="退出登录">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7oB-yT-Z9B"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="MFx-z1-AhV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="1dF-ZY-Nla"/>
+                            <constraint firstItem="MFx-z1-AhV" firstAttribute="top" secondItem="rri-dd-auG" secondAttribute="bottom" constant="28" id="8Yu-xJ-LrJ"/>
+                            <constraint firstItem="rri-dd-auG" firstAttribute="top" secondItem="1ZW-mT-2N0" secondAttribute="bottom" constant="240" id="9iD-pm-pQi"/>
+                            <constraint firstItem="gLt-Bj-rcs" firstAttribute="width" secondItem="MFx-z1-AhV" secondAttribute="width" id="F7o-0y-f6S"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xmM-jM-4ae" secondAttribute="trailing" constant="20" id="NZG-pQ-uoS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gLt-Bj-rcs" secondAttribute="trailing" constant="20" id="TaT-lc-2U0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rri-dd-auG" secondAttribute="trailing" constant="15" id="XuS-Dy-4ti"/>
+                            <constraint firstItem="gLt-Bj-rcs" firstAttribute="top" secondItem="rri-dd-auG" secondAttribute="bottom" constant="28" id="aRb-aa-ri2"/>
+                            <constraint firstItem="xmM-jM-4ae" firstAttribute="top" secondItem="MFx-z1-AhV" secondAttribute="bottom" constant="59" id="fKj-Fu-GuP"/>
+                            <constraint firstItem="xmM-jM-4ae" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="rh2-wG-wAw"/>
+                            <constraint firstItem="rri-dd-auG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="rjY-Ct-xxL"/>
+                            <constraint firstItem="gLt-Bj-rcs" firstAttribute="leading" secondItem="MFx-z1-AhV" secondAttribute="trailing" constant="20" id="tjX-vP-ySe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="roomIdField" destination="rri-dd-auG" id="ut4-go-qgK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="57.589285714285708"/>
+        </scene>
+    </scenes>
+</document>
