@@ -775,9 +775,9 @@
 					"\"VideoToolbox\"",
 					"-Objc",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.centaline.saasaplus;
+				PRODUCT_BUNDLE_IDENTIFIER = com.centanet.newprop.panketong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = SaaSAplusDev;
+				PROVISIONING_PROFILE_SPECIFIER = AplusDev;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -832,7 +832,7 @@
 					"\"VideoToolbox\"",
 					"-Objc",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.centaline.saasaplus;
+				PRODUCT_BUNDLE_IDENTIFIER = com.centaline.saasapluscom.centanet.newprop.panketong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = SaaSAplus;
 				TARGETED_DEVICE_FAMILY = "1,2";
