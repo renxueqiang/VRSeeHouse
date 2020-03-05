@@ -32,6 +32,8 @@
 @property (nonatomic, copy) NSString *compressVideoPath;
 @property (nonatomic, strong)AVAssetWriter *assetWriter;
 @property (nonatomic, strong)AVAssetWriterInput *assetWriterInput;
+@property (nonatomic, strong) NSDictionary *dict;
+@property (weak, nonatomic) IBOutlet UITextField *account_textField;
 @end
 
 @implementation ViewController
@@ -42,24 +44,38 @@
     [[NIMAVChatSDK sharedSDK].netCallManager addDelegate:self];
     [[[NIMSDK sharedSDK] loginManager] addDelegate:self];
     
+    
+    self.dict = @{@"test1":@"1501133a1a6d70d08a8e484a7fd2328d",
+                  @"ydaj1":@"3ccd02e6865105c1d0f9f034916f7d75"};
 }
 
 #pragma mark -  ***********登陆***********
 - (IBAction)joinMetting:(UIButton *)sender {
     
     
-    [[[NIMSDK sharedSDK] loginManager] login:@"test1" token:@"1501133a1a6d70d08a8e484a7fd2328d" completion:^(NSError * _Nullable error) {
+    if ([self.dict objectForKey:self.account_textField.text]) {
         
-        if (!error) NSLog(@"......登陆成功了......");
-    }];
+        [[[NIMSDK sharedSDK] loginManager] login:self.account_textField.text token:self.dict[self.account_textField.text] completion:^(NSError * _Nullable error) {
+            
+            if (!error) NSLog(@"......登陆成功了......");
+        }];
+    }else{
+        
+        NSLog(@"请输入账号");
+    }
+    
+    
 
 
 }
 - (IBAction)loginOut:(UIButton *)sender {
-    
+   
+    NSString *account = [[NIMSDK sharedSDK] loginManager].currentAccount;
     [[[NIMSDK sharedSDK] loginManager] logout:^(NSError * _Nullable error) {
         
-        if (!error) NSLog(@".....退出成功了......");
+        
+        if (!error) NSLog(@".....%@退出成功了......",account);
+        
     }];
     
 }

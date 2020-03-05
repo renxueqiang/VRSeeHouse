@@ -85,6 +85,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="首页" id="xcZ-O1-bip"/>
                     <connections>
+                        <outlet property="account_textField" destination="rri-dd-auG" id="uQt-VG-Y2n"/>
                         <outlet property="roomIdField" destination="rri-dd-auG" id="ut4-go-qgK"/>
                     </connections>
                 </viewController>
