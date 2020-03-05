@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--首页-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -83,7 +83,7 @@
                             <constraint firstItem="gLt-Bj-rcs" firstAttribute="leading" secondItem="MFx-z1-AhV" secondAttribute="trailing" constant="20" id="tjX-vP-ySe"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="xcZ-O1-bip"/>
+                    <navigationItem key="navigationItem" title="首页" id="xcZ-O1-bip"/>
                     <connections>
                         <outlet property="roomIdField" destination="rri-dd-auG" id="ut4-go-qgK"/>
                     </connections>
